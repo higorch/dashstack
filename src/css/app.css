@@ -1,3 +1,9 @@
+@import 'overlayscrollbars/overlayscrollbars.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.os-scrollbar-handle {
+    @apply bg-[#64b031]/50 !important;
+}

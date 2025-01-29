@@ -5,7 +5,13 @@ export default {
     "./html/**/*html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fontFamily: {
+          Nunito_Sans: ['Nunito Sans'],
+        },
+      },
+    },
   },
   plugins: [],
 }
