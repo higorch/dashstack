@@ -20,5 +20,17 @@
   "bugs": {
     "url": "https://github.com/higorch/dashstack/issues"
   },
-  "homepage": "https://github.com/higorch/dashstack#readme"
+  "homepage": "https://github.com/higorch/dashstack#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.13",
+    "@tailwindcss/postcss": "^4.0.0",
+    "alpinejs": "^3.14.8",
+    "inputmask": "^5.0.9",
+    "overlayscrollbars": "^2.10.1",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0"
+  }
 }
