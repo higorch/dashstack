@@ -1,0 +1,24 @@
+{
+  "name": "dashstack",
+  "version": "1.0.0",
+  "description": "Dashboard for business",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "prod": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higorch/dashstack.git"
+  },
+  "keywords": [
+    "dashboard"
+  ],
+  "author": "Higor Ch.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/higorch/dashstack/issues"
+  },
+  "homepage": "https://github.com/higorch/dashstack#readme"
+}
