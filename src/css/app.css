@@ -7,3 +7,41 @@
 .os-scrollbar-handle {
     @apply bg-[#64b031]/50 !important;
 }
+
+@layer components {
+
+    /* tables */
+    .table-primary {
+        @apply w-full;
+    }
+    .table-primary tr th,
+    .table-primary tr td {
+        @apply font-['Nunito_Sans'] text-sm text-[#202224];
+    }
+    .table-primary tr th {
+        @apply border-b border-[#D5D5D5] px-7 py-3 text-left font-bold bg-[#FCFDFD];
+    }
+    .table-primary tr td {
+        @apply border-b border-[#D5D5D5] px-7 py-5;
+    }
+    .table-primary tbody tr:last-child * {
+        @apply border-b-0;
+    }
+
+    /* badge  */
+    .badge {
+        @apply block text-center font-['Nunito_Sans'] font-bold px-3 py-1 text-xs;
+    }
+    .badge.badge-green {
+        @apply rounded-md text-[#00B69B] bg-[#ccf0eb];
+    }
+    .badge.badge-purple {
+        @apply rounded-md text-[#6226EF] bg-[#e0d4fc];
+    }
+    .badge.badge-red {
+        @apply rounded-md text-[#EF3826] bg-[#fcd7d4];
+    }
+    .badge.badge-yellow {
+        @apply rounded-md text-[#FFA756] bg-[#ffeddd];
+    }
+}

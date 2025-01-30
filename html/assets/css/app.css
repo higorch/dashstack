@@ -1147,11 +1147,99 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+/* tables */
+.table-primary{
+  width: 100%;
+}
+.table-primary tr th,
+    .table-primary tr td{
+  font-family: 'Nunito Sans';
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(32 34 36 / var(--tw-text-opacity, 1));
+}
+.table-primary tr th{
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(213 213 213 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 253 253 / var(--tw-bg-opacity, 1));
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  font-weight: 700;
+}
+.table-primary tr td{
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(213 213 213 / var(--tw-border-opacity, 1));
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.table-primary tbody tr:last-child *{
+  border-bottom-width: 0px;
+}
+/* badge  */
+.badge{
+  display: block;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  font-family: 'Nunito Sans';
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+.badge.badge-green{
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 240 235 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(0 182 155 / var(--tw-text-opacity, 1));
+}
+.badge.badge-purple{
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 212 252 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(98 38 239 / var(--tw-text-opacity, 1));
+}
+.badge.badge-red{
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 215 212 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(239 56 38 / var(--tw-text-opacity, 1));
+}
+.badge.badge-yellow{
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 221 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 167 86 / var(--tw-text-opacity, 1));
+}
 .collapse{
   visibility: collapse;
 }
+.absolute{
+  position: absolute;
+}
 .relative{
   position: relative;
+}
+.inset-y-0{
+  top: 0px;
+  bottom: 0px;
+}
+.left-0{
+  left: 0px;
 }
 .block{
   display: block;
@@ -1168,6 +1256,9 @@ video {
 .h-screen{
   height: 100vh;
 }
+.w-1{
+  width: 0.25rem;
+}
 .w-\[240px\]{
   width: 240px;
 }
@@ -1179,6 +1270,9 @@ video {
 }
 .grow{
   flex-grow: 1;
+}
+.table-auto{
+  table-layout: auto;
 }
 .border-collapse{
   border-collapse: collapse;
@@ -1192,8 +1286,37 @@ video {
 .justify-center{
   justify-content: center;
 }
+.gap-3{
+  gap: 0.75rem;
+}
+.gap-6{
+  gap: 1.5rem;
+}
+.gap-7{
+  gap: 1.75rem;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+.rounded-br-lg{
+  border-bottom-right-radius: 0.5rem;
+}
+.rounded-tr-lg{
+  border-top-right-radius: 0.5rem;
+}
 .border{
   border-width: 1px;
+}
+.border-\[\#e8e9e9\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(232 233 233 / var(--tw-border-opacity, 1));
+}
+.bg-\[\#4880FF\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(72 128 255 / var(--tw-bg-opacity, 1));
 }
 .bg-\[\#F5F6FA\]{
   --tw-bg-opacity: 1;
@@ -1203,6 +1326,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
+.p-4{
+  padding: 1rem;
+}
 .p-7{
   padding: 1.75rem;
 }
@@ -1210,18 +1336,35 @@ video {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 .font-\[\'Nunito_Sans\'\]{
   font-family: 'Nunito Sans';
 }
+.text-\[22px\]{
+  font-size: 22px;
+}
 .text-\[32px\]{
   font-size: 32px;
 }
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .font-bold{
   font-weight: 700;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.uppercase{
+  text-transform: uppercase;
 }
 .italic{
   font-style: italic;
@@ -1232,6 +1375,10 @@ video {
 .text-\[\#202224\]{
   --tw-text-opacity: 1;
   color: rgb(32 34 36 / var(--tw-text-opacity, 1));
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 .subpixel-antialiased{
   -webkit-font-smoothing: auto;
