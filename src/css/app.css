@@ -10,6 +10,42 @@
 
 @layer components {
 
+     /* dash-container  */
+    .dash-container {
+        @apply flex-1 flex flex-col;
+    }
+
+    /* dash-sidebar  */
+    .dash-sidebar  {
+        @apply w-[240px] flex flex-col transition-all duration-200 bg-white;
+    }
+    .dash-sidebar.close {
+        @apply w-[100px];
+    }
+
+    /* menu-side */
+    .menu-side {
+        @apply flex flex-col;
+    }
+    .menu-side nav ul {
+        @apply flex flex-col gap-1;
+    }
+    .menu-side nav ul li {
+        @apply px-6 relative;
+    }
+    .menu-side nav ul li.active::before {
+        @apply content-[''] absolute left-0 inset-y-0 w-1 rounded-tr-lg rounded-br-lg bg-[#4880FF]
+    }
+    .menu-side nav ul li a {
+        @apply flex items-center gap-3 p-4 rounded-lg whitespace-nowrap overflow-hidden text-clip text-[#202224] bg-white;
+    }
+    .menu-side nav ul li.active a {
+        @apply text-white bg-[#4880FF];
+    }
+    .dash-sidebar.close .menu-side nav ul li.active a {
+        @apply bg-white text-[#4880FF];
+    }
+
     /* tables */
     .table-primary {
         @apply w-full;

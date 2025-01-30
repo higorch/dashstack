@@ -8,4 +8,18 @@ window.OverlayScrollbars = OverlayScrollbars;
 
 OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrollPlugin]);
 
+// START IMPLEMENTATION
+Alpine.data('app', () => ({
+    openMenuSidebar: true,
+    events: {
+        ['@menu-side-close.window']() {
+            this.openMenuSidebar = false;
+        },
+        ['@menu-side-open.window']() {
+            this.openMenuSidebar = true;
+        }
+    }
+}));
+// END IMPLEMENTATION
+
 Alpine.start();
