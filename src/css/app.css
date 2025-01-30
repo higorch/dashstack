@@ -17,7 +17,7 @@
 
     /* dash-sidebar  */
     .dash-sidebar  {
-        @apply w-[240px] flex flex-col transition-all duration-200 bg-white;
+        @apply w-[240px] flex flex-col transition-all duration-100 ease-in-out bg-white;
     }
     .dash-sidebar.close {
         @apply w-[100px];
@@ -37,13 +37,31 @@
         @apply content-[''] absolute left-0 inset-y-0 w-1 rounded-tr-lg rounded-br-lg bg-[#4880FF]
     }
     .menu-side nav ul li a {
-        @apply flex items-center gap-3 p-4 rounded-lg whitespace-nowrap overflow-hidden text-clip text-[#202224] bg-white;
+        @apply relative flex items-center gap-3 p-4 whitespace-nowrap overflow-hidden text-clip rounded-lg text-[#202224] bg-white;
+    }
+    .menu-side nav ul li a::after {
+        @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent;
     }
     .menu-side nav ul li.active a {
         @apply text-white bg-[#4880FF];
     }
+    .menu-side nav ul li.active a::after {
+        @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#4880FF] to-transparent;
+    }
+    .dash-sidebar.close .menu-side nav ul li {
+        @apply px-4;
+    }
+    .dash-sidebar.close .menu-side nav ul li a {
+        @apply flex-col justify-center text-center gap-1 px-0 py-2 whitespace-normal overflow-auto;
+    }
+    .dash-sidebar.close .menu-side nav ul li a span {
+        @apply text-xs;
+    }
     .dash-sidebar.close .menu-side nav ul li.active a {
         @apply bg-white text-[#4880FF];
+    }
+    .dash-sidebar.close .menu-side nav ul li a::after {
+        @apply hidden;
     }
 
     /* tables */

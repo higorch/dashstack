@@ -1161,8 +1161,8 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   transition-property: all;
+  transition-duration: 100ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
 }
 .dash-sidebar.close{
   width: 100px;
@@ -1196,6 +1196,7 @@ video {
   content: var(--tw-content);
 }
 .menu-side nav ul li a{
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1209,17 +1210,68 @@ video {
   --tw-text-opacity: 1;
   color: rgb(32 34 36 / var(--tw-text-opacity, 1));
 }
+.menu-side nav ul li a::after{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 2.5rem;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  --tw-content: '';
+  content: var(--tw-content);
+}
 .menu-side nav ul li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(72 128 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+.menu-side nav ul li.active a::after{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 2.5rem;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #4880FF var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(72 128 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+.dash-sidebar.close .menu-side nav ul li{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.dash-sidebar.close .menu-side nav ul li a{
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  overflow: auto;
+  white-space: normal;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.dash-sidebar.close .menu-side nav ul li a span{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .dash-sidebar.close .menu-side nav ul li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(72 128 255 / var(--tw-text-opacity, 1));
+}
+.dash-sidebar.close .menu-side nav ul li a::after{
+  display: none;
 }
 /* tables */
 .table-primary{
@@ -1369,6 +1421,13 @@ video {
   width: 1.25rem;
   height: 1.25rem;
 }
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.h-\[72px\]{
+  height: 72px;
+}
 .h-screen{
   height: 100vh;
 }
@@ -1453,13 +1512,9 @@ video {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
 }
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .font-\[\'Nunito_Sans\'\]{
   font-family: 'Nunito Sans';
