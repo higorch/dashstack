@@ -44,4 +44,20 @@
     .badge.badge-yellow {
         @apply rounded-md text-[#FFA756] bg-[#ffeddd];
     }
+
+    /* profile-name */
+    .profile-name {
+        @apply relative max-w-[90px] whitespace-nowrap overflow-hidden text-clip font-['Nunito_Sans'] font-bold text-sm text-[#404040];
+    }
+    .profile-name::after {
+        @apply content-[''] absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-white to-transparent;
+    }
+
+    /* notification-icon */
+    .notification-icon {
+        @apply relative;
+    }
+    .notification-icon.notification-icon-active::after {
+        @apply content-[''] absolute size-3 -top-1 -right-[25px] rounded-full bg-[#F93C65];
+    }
 }

@@ -1225,6 +1225,50 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 167 86 / var(--tw-text-opacity, 1));
 }
+/* profile-name */
+.profile-name{
+  position: relative;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  font-family: 'Nunito Sans';
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity, 1));
+}
+.profile-name::after{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 1.5rem;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+/* notification-icon */
+.notification-icon{
+  position: relative;
+}
+.notification-icon.notification-icon-active::after{
+  position: absolute;
+  top: -0.25rem;
+  right: -25px;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 60 101 / var(--tw-bg-opacity, 1));
+  --tw-content: '';
+  content: var(--tw-content);
+}
 .collapse{
   visibility: collapse;
 }
@@ -1252,6 +1296,14 @@ video {
 }
 .hidden{
   display: none;
+}
+.size-10{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.size-5{
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .h-screen{
   height: 100vh;
@@ -1286,8 +1338,17 @@ video {
 .justify-center{
   justify-content: center;
 }
+.justify-between{
+  justify-content: space-between;
+}
+.gap-10{
+  gap: 2.5rem;
+}
 .gap-3{
   gap: 0.75rem;
+}
+.gap-4{
+  gap: 1rem;
 }
 .gap-6{
   gap: 1.5rem;
@@ -1297,6 +1358,9 @@ video {
 }
 .overflow-hidden{
   overflow: hidden;
+}
+.rounded-full{
+  border-radius: 9999px;
 }
 .rounded-lg{
   border-radius: 0.5rem;
@@ -1309,6 +1373,13 @@ video {
 }
 .border{
   border-width: 1px;
+}
+.border-\[0\.2px\]{
+  border-width: 0.2px;
+}
+.border-\[\#ababab\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(171 171 171 / var(--tw-border-opacity, 1));
 }
 .border-\[\#e8e9e9\]{
   --tw-border-opacity: 1;
@@ -1339,6 +1410,14 @@ video {
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .py-7{
   padding-top: 1.75rem;
