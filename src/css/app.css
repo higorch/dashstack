@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 .os-scrollbar-handle {
-    @apply bg-[#64b031]/50 !important;
+    @apply bg-[#4880FF]/50 !important;
 }
 
 @layer components {
 
      /* dash-container  */
     .dash-container {
-        @apply flex-1 flex flex-col;
+        @apply flex-1 flex flex-col w-full;
     }
 
     /* dash-sidebar  */
@@ -68,6 +68,17 @@
     .table-primary {
         @apply w-full;
     }
+    .table-primary.table-fixed {
+        @apply w-auto min-w-full;
+    }
+    .table-primary.table-fixed tr th,
+    .table-primary.table-fixed tr td {
+        @apply whitespace-nowrap;
+    }
+    .table-primary.table-fixed tr th:first-child,
+    .table-primary.table-fixed tr td:first-child {
+        /* @apply shadow-2xl; */
+    }
     .table-primary tr th,
     .table-primary tr td {
         @apply font-['Nunito_Sans'] text-sm text-[#202224];
@@ -76,7 +87,7 @@
         @apply border-b border-[#D5D5D5] px-7 py-3 text-left font-bold bg-[#FCFDFD];
     }
     .table-primary tr td {
-        @apply border-b border-[#D5D5D5] px-7 py-5;
+        @apply border-b border-[#D5D5D5] px-7 py-5 bg-white;
     }
     .table-primary tbody tr:last-child * {
         @apply border-b-0;

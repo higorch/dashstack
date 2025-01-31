@@ -1150,6 +1150,7 @@ video {
 /* dash-container  */
 .dash-container{
   display: flex;
+  width: 100%;
   flex: 1 1 0%;
   flex-direction: column;
 }
@@ -1277,6 +1278,18 @@ video {
 .table-primary{
   width: 100%;
 }
+.table-primary.table-fixed{
+  width: auto;
+  min-width: 100%;
+}
+.table-primary.table-fixed tr th,
+    .table-primary.table-fixed tr td{
+  white-space: nowrap;
+}
+.table-primary.table-fixed tr th:first-child,
+    .table-primary.table-fixed tr td:first-child {
+        /* @apply shadow-2xl; */
+    }
 .table-primary tr th,
     .table-primary tr td{
   font-family: 'Nunito Sans';
@@ -1302,6 +1315,8 @@ video {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(213 213 213 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   padding-left: 1.75rem;
   padding-right: 1.75rem;
   padding-top: 1.25rem;
@@ -1401,6 +1416,12 @@ video {
 .relative{
   position: relative;
 }
+.sticky{
+  position: sticky;
+}
+.left-0{
+  left: 0px;
+}
 .block{
   display: block;
 }
@@ -1431,14 +1452,17 @@ video {
 .h-screen{
   height: 100vh;
 }
+.w-\[80px\]{
+  width: 80px;
+}
 .w-full{
   width: 100%;
 }
 .grow{
   flex-grow: 1;
 }
-.table-auto{
-  table-layout: auto;
+.table-fixed{
+  table-layout: fixed;
 }
 .border-collapse{
   border-collapse: collapse;
@@ -1559,5 +1583,5 @@ video {
 }
 
 .os-scrollbar-handle{
-  background-color: rgb(100 176 49 / 0.5) !important;
+  background-color: rgb(72 128 255 / 0.5) !important;
 }
