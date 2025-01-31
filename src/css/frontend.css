@@ -19,7 +19,7 @@
     .dash-sidebar  {
         @apply w-[240px] flex flex-col transition-[width] duration-300 ease-in-out bg-white dark:bg-[#273142];
     }
-    .dash-sidebar.close {
+    .dash-sidebar.compact {
         @apply w-[100px];
     }
 
@@ -48,19 +48,19 @@
     .menu-side nav ul li.active a::after {
         @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#4880FF] to-transparent;
     }
-    .dash-sidebar.close .menu-side nav ul li {
+    .dash-sidebar.compact .menu-side nav ul li {
         @apply px-4;
     }
-    .dash-sidebar.close .menu-side nav ul li a {
+    .dash-sidebar.compact .menu-side nav ul li a {
         @apply flex-col justify-center text-center gap-1 px-0 py-2 whitespace-normal overflow-auto;
     }
-    .dash-sidebar.close .menu-side nav ul li a span {
+    .dash-sidebar.compact .menu-side nav ul li a span {
         @apply text-xs;
     }
-    .dash-sidebar.close .menu-side nav ul li.active a {
+    .dash-sidebar.compact .menu-side nav ul li.active a {
         @apply bg-white dark:bg-[#273142] text-[#4880FF];
     }
-    .dash-sidebar.close .menu-side nav ul li a::after {
+    .dash-sidebar.compact .menu-side nav ul li a::after {
         @apply hidden;
     }
 
