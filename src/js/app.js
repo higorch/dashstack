@@ -11,6 +11,7 @@ OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrol
 // START IMPLEMENTATION
 Alpine.data('app', () => ({
     openMenuSidebar: true,
+    darkMode: localStorage.getItem('theme-dark') === 'true',
     events: {
         ['@menu-side-close.window']() {
             this.openMenuSidebar = false;
@@ -18,7 +19,15 @@ Alpine.data('app', () => ({
         ['@menu-side-open.window']() {
             this.openMenuSidebar = true;
         }
-    }
+    },
+    init() {
+        var themeDark = localStorage.getItem('theme-dark') === 'true';
+        document.documentElement.classList.toggle('dark', themeDark);
+    },
+    toggleThemeDark() {
+        this.darkMode = !this.darkMode;
+        localStorage.setItem('theme-dark', this.darkMode);
+    },
 }));
 // END IMPLEMENTATION
 

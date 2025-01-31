@@ -3449,11 +3449,20 @@ overlayscrollbars__WEBPACK_IMPORTED_MODULE_2__.OverlayScrollbars.plugin([overlay
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('app', function () {
   return {
     openMenuSidebar: true,
+    darkMode: localStorage.getItem('theme-dark') === 'true',
     events: _defineProperty(_defineProperty({}, '@menu-side-close.window', function menuSideCloseWindow() {
       this.openMenuSidebar = false;
     }), '@menu-side-open.window', function menuSideOpenWindow() {
       this.openMenuSidebar = true;
-    })
+    }),
+    init: function init() {
+      var themeDark = localStorage.getItem('theme-dark') === 'true';
+      document.documentElement.classList.toggle('dark', themeDark);
+    },
+    toggleThemeDark: function toggleThemeDark() {
+      this.darkMode = !this.darkMode;
+      localStorage.setItem('theme-dark', this.darkMode);
+    }
   };
 });
 // END IMPLEMENTATION
