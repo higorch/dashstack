@@ -12,6 +12,9 @@ export default {
           Nunito_Sans: ['Nunito Sans'],
         },
       },
+      screens: {
+        'md': '992px',
+      },
     },
   },
   plugins: [],

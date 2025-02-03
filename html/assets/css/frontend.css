@@ -1152,6 +1152,7 @@ video {
   order: 1;
   display: flex;
   width: 100%;
+  flex-grow: 1;
   flex-direction: column;
   padding-bottom: 80px;
   transition-property: width;
@@ -1161,12 +1162,13 @@ video {
 .group\/compact-side:only-child .dash-container{
   width: 100%;
 }
-@media (min-width: 768px){
+@media (min-width: 992px){
 
   .dash-container{
     order: 2;
     margin-left: auto;
     width: calc(100% - 240px);
+    flex-grow: 0;
     padding-bottom: 0px;
   }
 
@@ -1196,7 +1198,7 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(39 49 66 / var(--tw-bg-opacity, 1));
 }
-@media (min-width: 768px){
+@media (min-width: 992px){
 
   .dash-sidebar{
     bottom: auto;
@@ -1214,14 +1216,20 @@ video {
 .menu-side{
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+}
+@media (min-width: 992px){
+
+  .menu-side{
+    flex-direction: column;
+  }
 }
 .menu-side nav ul{
   display: flex;
   flex-direction: row;
   gap: 0.25rem;
 }
-@media (min-width: 768px){
+@media (min-width: 992px){
 
   .menu-side nav ul{
     flex-direction: column;
@@ -1338,6 +1346,69 @@ video {
 .group\/compact-side .dash-sidebar .menu-side nav ul li a::after{
   display: none;
 }
+@media (max-width: 992px) {
+        .dash-sidebar .menu-side nav{
+    display: flex;
+    height: 100%;
+  }
+        .dash-sidebar .menu-side nav,
+        .dash-sidebar .menu-side nav ul{
+    flex-grow: 1;
+  }
+        .menu-side nav ul li.active::before{
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 0.25rem;
+    width: 100%;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(72 128 255 / var(--tw-bg-opacity, 1));
+    --tw-content: '';
+    content: var(--tw-content);
+  }
+        .dash-sidebar .menu-side nav ul li{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+        .dash-sidebar .menu-side nav ul li a{
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    overflow: auto;
+    white-space: normal;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+        .dash-sidebar .menu-side nav ul li a span{
+    white-space: nowrap;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+        .dash-sidebar .menu-side nav ul li.active a{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(72 128 255 / var(--tw-text-opacity, 1));
+  }
+        .dash-sidebar .menu-side nav ul li.active a:is(.dark *){
+    --tw-bg-opacity: 1;
+    background-color: rgb(39 49 66 / var(--tw-bg-opacity, 1));
+  }
+        .dash-sidebar .menu-side nav ul li a::after{
+    display: none;
+  }
+    }
 /* tables */
 .table-primary{
   width: 100%;
@@ -1473,7 +1544,7 @@ video {
 /* profile-name */
 .profile-name{
   position: relative;
-  max-width: 90px;
+  max-width: 65px;
   overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
@@ -1487,6 +1558,12 @@ video {
 .profile-name:is(.dark *){
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+@media (min-width: 992px){
+
+  .profile-name{
+    max-width: 90px;
+  }
 }
 .profile-name::after{
   position: absolute;
@@ -1547,10 +1624,6 @@ video {
 .hidden{
   display: none;
 }
-.size-10{
-  width: 2.5rem;
-  height: 2.5rem;
-}
 .size-5{
   width: 1.25rem;
   height: 1.25rem;
@@ -1558,6 +1631,10 @@ video {
 .size-6{
   width: 1.5rem;
   height: 1.5rem;
+}
+.size-9{
+  width: 2.25rem;
+  height: 2.25rem;
 }
 .h-\[72px\]{
   height: 72px;
@@ -1591,9 +1668,6 @@ video {
 }
 .justify-between{
   justify-content: space-between;
-}
-.gap-10{
-  gap: 2.5rem;
 }
 .gap-3{
   gap: 0.75rem;
@@ -1731,14 +1805,27 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-@media (min-width: 768px){
+@media (min-width: 992px){
+
+  .md\:block{
+    display: block;
+  }
 
   .md\:flex{
     display: flex;
   }
 
+  .md\:size-10{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:gap-10{
+    gap: 2.5rem;
   }
 
   .group\/compact-side:only-child .md\:group-only\/compact-side\:block{
