@@ -10,17 +10,14 @@
 
 @layer components {
 
-     /* dash-container  */
+    /* dash-container  */
     .dash-container {
-        @apply flex-1 flex flex-col w-full;
+        @apply flex flex-col w-[calc(100%-240px)] group-only/compact-side:w-[calc(100%-100px)] ml-auto transition-[width] duration-300 ease-in-out;
     }
 
     /* dash-sidebar  */
     .dash-sidebar  {
-        @apply w-[240px] flex flex-col transition-[width] duration-300 ease-in-out bg-white dark:bg-[#273142];
-    }
-    .dash-sidebar.compact {
-        @apply w-[100px];
+        @apply w-[240px] group-only/compact-side:w-[100px] h-full fixed z-50 flex flex-col transition-[width] duration-300 ease-in-out bg-white dark:bg-[#273142];
     }
 
     /* menu-side */
@@ -37,7 +34,7 @@
         @apply content-[''] absolute left-0 inset-y-0 w-1 rounded-tr-lg rounded-br-lg bg-[#4880FF]
     }
     .menu-side nav ul li a {
-        @apply relative flex items-center gap-3 p-4 whitespace-nowrap overflow-hidden text-clip rounded-lg text-[#202224] dark:text-white bg-white dark:bg-[#273142];
+        @apply relative flex items-center gap-3 p-4 whitespace-nowrap overflow-hidden text-clip rounded-md text-[#202224] dark:text-white bg-white dark:bg-[#273142];
     }
     .menu-side nav ul li a::after {
         @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white dark:from-[#273142] to-transparent;
@@ -48,19 +45,19 @@
     .menu-side nav ul li.active a::after {
         @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#4880FF] to-transparent;
     }
-    .dash-sidebar.compact .menu-side nav ul li {
+    .group\/compact-side .dash-sidebar .menu-side nav ul li {
         @apply px-4;
     }
-    .dash-sidebar.compact .menu-side nav ul li a {
+    .group\/compact-side .dash-sidebar .menu-side nav ul li a {
         @apply flex-col justify-center text-center gap-1 px-0 py-2 whitespace-normal overflow-auto;
     }
-    .dash-sidebar.compact .menu-side nav ul li a span {
+    .group\/compact-side .dash-sidebar .menu-side nav ul li a span {
         @apply text-xs;
     }
-    .dash-sidebar.compact .menu-side nav ul li.active a {
+    .group\/compact-side .dash-sidebar .menu-side nav ul li.active a {
         @apply bg-white dark:bg-[#273142] text-[#4880FF];
     }
-    .dash-sidebar.compact .menu-side nav ul li a::after {
+    .group\/compact-side .dash-sidebar .menu-side nav ul li a::after {
         @apply hidden;
     }
 
