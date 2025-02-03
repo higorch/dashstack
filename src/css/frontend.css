@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .os-scrollbar-handle {
-    @apply bg-[#4880FF]/50 !important;
+    @apply bg-[#4880FF]/40 !important;
 }
 
 @layer components {
@@ -17,12 +17,12 @@
 
     /* dash-sidebar  */
     .dash-sidebar  {
-        @apply w-full md:w-[240px] group-only/compact-side:w-full md:group-only/compact-side:w-[100px] h-[80px] md:h-full fixed bottom-0 md:bottom-auto md:left-0 z-50 flex flex-row md:flex-col transition-[width] duration-300 ease-in-out bg-white dark:bg-[#273142];
+        @apply flex flex-row md:flex-col w-full md:w-[240px] group-only/compact-side:w-full md:group-only/compact-side:w-[100px] h-[80px] md:h-full fixed bottom-0 md:bottom-auto md:left-0 z-50 transition-[width] duration-300 ease-in-out bg-white dark:bg-[#273142];
     }
 
     /* menu-side */
     .menu-side {
-        @apply flex flex-row md:flex-col w-full;
+        @apply flex flex-row md:flex-col w-full h-full;
     }
     .menu-side nav ul {
         @apply flex flex-row md:flex-col gap-1;
@@ -132,7 +132,7 @@
 
     /* profile-name */
     .profile-name {
-        @apply relative max-w-[65px] md:max-w-[90px] whitespace-nowrap overflow-hidden text-clip font-['Nunito_Sans'] font-bold text-sm text-[#404040] dark:text-white;
+        @apply relative max-w-[65px] md:max-w-[90px] whitespace-nowrap overflow-hidden text-clip font-['Nunito_Sans'] font-bold text-xs md:text-sm text-[#404040] dark:text-white;
     }
     .profile-name::after {
         @apply content-[''] absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-white dark:from-[#273142] to-transparent;
