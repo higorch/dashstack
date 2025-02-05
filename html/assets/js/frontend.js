@@ -3446,7 +3446,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('app', function () {
   return {
     themedark: localStorage.getItem('theme-dark') === 'true',
     themeSidebar: localStorage.getItem('theme-sidebar') === 'true',
-    togglethemeDark: function togglethemeDark() {
+    toggleThemeDark: function toggleThemeDark() {
       this.themedark = !this.themedark;
       localStorage.setItem('theme-dark', this.themedark);
     },

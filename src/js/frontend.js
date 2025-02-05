@@ -12,7 +12,7 @@ OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrol
 Alpine.data('app', () => ({
     themedark: localStorage.getItem('theme-dark') === 'true',
     themeSidebar: localStorage.getItem('theme-sidebar') === 'true',
-    togglethemeDark() {
+    toggleThemeDark() {
         this.themedark = !this.themedark;
         localStorage.setItem('theme-dark', this.themedark);
     },

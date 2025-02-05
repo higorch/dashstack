@@ -17,10 +17,10 @@
 
     /* dash-sidebar  */
     .dash-sidebar  {
-        @apply invisible md:visible flex flex-col w-full md:w-[240px] md:group-only/theme-sidebar:w-[100px] h-full fixed left-0 z-50 md:transition-['width'] md:duration-300 md:ease-in-out bg-black/70 md:bg-transparent;
+        @apply invisible md:visible flex w-full md:w-[240px] md:max-w-[240px] md:group-only/theme-sidebar:w-[100px] md:group-only/theme-sidebar:max-w-[100px] h-full fixed left-0 z-50 md:transition-['width'] md:duration-300 md:ease-in-out bg-black/70 md:bg-transparent;
     }
     .dash-sidebar .dash-sidebar-inner {
-        @apply absolute -left-full md:left-0 flex flex-col max-w-[240px] md:group-only/theme-sidebar:max-w-[100px] w-full h-full transition-['left'] duration-300 ease-in-out bg-white dark:bg-[#273142];
+        @apply absolute -left-full md:left-0 flex flex-col w-[240px] max-w-[240px] md:max-w-none md:w-full h-full transition-['left'] md:transition-none duration-300 ease-in-out bg-white dark:bg-[#273142];
     }
     .group\/theme-sidebar .dash-sidebar {
         @apply visible;
