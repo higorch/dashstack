@@ -10,22 +10,22 @@ OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrol
 
 // START IMPLEMENTATION
 Alpine.data('app', () => ({
-    darkMode: localStorage.getItem('theme-dark') === 'true',
-    compactSide: localStorage.getItem('theme-sidebar') === 'true',
-    toggleThemeDark() {
-        this.darkMode = !this.darkMode;
-        localStorage.setItem('theme-dark', this.darkMode);
+    themedark: localStorage.getItem('theme-dark') === 'true',
+    themeSidebar: localStorage.getItem('theme-sidebar') === 'true',
+    togglethemeDark() {
+        this.themedark = !this.themedark;
+        localStorage.setItem('theme-dark', this.themedark);
     },
     toggleSidebar() {
-        this.compactSide = !this.compactSide;
-        localStorage.setItem('theme-sidebar', this.compactSide);
+        this.themeSidebar = !this.themeSidebar;
+        localStorage.setItem('theme-sidebar', this.themeSidebar);
     },
     closeSidebarMobile() {
-        // let sidebar = this.$el;      
+        let sidebar = this.$el;
 
-        // if (sidebar === this.$event.target) {
-        //     this.sidebar = false;
-        // }
+        if (sidebar === this.$event.target) {
+            this.themeSidebar = false;
+        }
     }
 }));
 // END IMPLEMENTATION
