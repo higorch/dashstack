@@ -1408,7 +1408,6 @@ video {
 }
 .table-primary tr th,
     .table-primary tr td{
-  font-family: 'Nunito Sans';
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
@@ -1469,7 +1468,6 @@ video {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   text-align: center;
-  font-family: 'Nunito Sans';
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
@@ -1538,7 +1536,6 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
-  font-family: 'Nunito Sans';
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 600;
@@ -1627,7 +1624,6 @@ video {
 /* label-basic */
 .label-basic{
   margin-bottom: 0.25rem;
-  font-family: 'Nunito Sans';
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
@@ -1655,7 +1651,6 @@ video {
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  font-family: 'Nunito Sans';
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(96 96 96 / var(--tw-text-opacity, 1));
@@ -1734,7 +1729,6 @@ video {
   overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
-  font-family: 'Nunito Sans';
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
@@ -2160,6 +2154,10 @@ video {
 
 .os-scrollbar-handle{
   background-color: rgb(72 128 255 / 0.4) !important;
+}
+
+*{
+  font-family: 'Nunito Sans';
 }
 
 .last\:border-b-0:last-child{
