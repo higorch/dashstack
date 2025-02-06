@@ -133,15 +133,15 @@
 
     /* label-basic */
     .label-basic {
-        @apply mb-1 text-sm font-bold text-gray-500;
+        @apply font-['Nunito_Sans'] font-bold mb-1 text-sm text-[#606060] dark:text-white;
     }
 
     /* input-basic */
     .input-basic {
-        @apply w-full h-[45px] py-1 px-2 shadow-sm appearance-none rounded-lg border text-zinc-600 dark:text-zinc-400 border-slate-300/90 dark:border-slate-700/90 bg-white dark:bg-slate-800;
+        @apply font-['Nunito_Sans'] font-semibold w-full h-[45px] py-1 px-2 shadow-sm appearance-none rounded-md border text-[#606060] dark:text-white border-[#D5D5D5] dark:border-[#404959] bg-[#F5F6FA] dark:bg-[#323D4E];
     }
     .input-basic:focus {
-        @apply border-2 shadow-none outline outline-2 outline-slate-800 dark:outline-slate-500;
+        @apply border-2 shadow-none outline outline-2 outline-[#404040] dark:outline-[#f5f6fa];
     }
     
     /* input-check-basic */
@@ -151,13 +151,13 @@
 
     /* input-group */
     .input-group {
-        @apply flex items-center h-[40px] py-1 px-2 rounded-lg border border-slate-300/80 dark:border-slate-700/80 bg-white dark:bg-slate-800;
+        @apply font-['Nunito_Sans'] font-semibold flex items-center h-[40px] py-1 px-2 rounded-md border border-[#D5D5D5] dark:border-[#404959] bg-[#F5F6FA] dark:bg-[#323D4E];
     }
     .input-group:focus-within {
-        @apply border-slate-300/80 dark:border-slate-700/80;
+        @apply border-[#D5D5D5] dark:border-[#404959];
     }
     .input-group .entry {
-        @apply w-full h-full bg-transparent outline-none appearance-none text-zinc-600 dark:text-zinc-400;
+        @apply w-full h-full bg-transparent outline-none appearance-none text-[#606060] dark:text-white;
     }
     .input-group .btn {
         @apply appearance-none px-1 text-[15px] text-gray-400 dark:text-gray-500;
@@ -165,7 +165,7 @@
 
     /* input error */
     .input-error {
-        @apply absolute left-0 right-0 bottom-0 h-[45px] px-3 text-sm leading-10 rounded-lg text-white bg-[#d25b61] dark:bg-red-900;
+        @apply absolute left-0 right-0 bottom-0 h-[45px] px-3 text-sm leading-10 rounded-md text-white bg-red-1;
     }
     .input-error::first-letter {
         @apply uppercase;
