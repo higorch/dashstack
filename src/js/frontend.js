@@ -22,7 +22,6 @@ Alpine.data('app', () => ({
     },
     closeSidebarMobile() {
         let sidebar = this.$el;
-
         if (sidebar === this.$event.target) {
             this.themeSidebar = false;
         }

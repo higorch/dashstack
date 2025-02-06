@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .os-scrollbar-handle {
-    @apply bg-[#4880FF]/40 !important;
+    @apply bg-blue-1/40 !important;
 }
 
 @layer components {
@@ -40,7 +40,7 @@
         @apply px-6 relative;
     }
     .dash-sidebar-menu nav ul li.active::before {
-        @apply content-[''] absolute left-0 inset-y-0 w-1 rounded-tr-lg rounded-br-lg bg-[#4880FF]
+        @apply content-[''] absolute left-0 inset-y-0 w-1 rounded-tr-lg rounded-br-lg bg-blue-1
     }
     .dash-sidebar-menu nav ul li a {
         @apply relative flex items-center gap-3 p-4 whitespace-nowrap overflow-hidden text-clip rounded-md text-[#202224] dark:text-white;
@@ -49,10 +49,10 @@
         @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white dark:from-[#273142] to-transparent;
     }
     .dash-sidebar-menu nav ul li.active a {
-        @apply text-white bg-[#4880FF];
+        @apply text-white bg-blue-1;
     }
     .dash-sidebar-menu nav ul li.active a::after {
-        @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#4880FF] to-transparent;
+        @apply content-[''] absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-blue-1 to-transparent;
     }
     @media (min-width: 992px) {
         .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li {
@@ -65,7 +65,7 @@
             @apply text-xs;
         }
         .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li.active a {
-            @apply bg-white dark:bg-[#273142] text-[#4880FF];
+            @apply bg-white dark:bg-[#273142] text-blue-1;
         }
         .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li a::after {
             @apply hidden;
@@ -102,16 +102,33 @@
         @apply block text-center font-['Nunito_Sans'] font-bold px-3 py-1 text-xs;
     }
     .badge.badge-green {
-        @apply rounded-md text-[#00B69B] dark:text-white bg-[#ccf0eb] dark:bg-[#00B69B];
+        @apply rounded-md text-green-1 dark:text-white bg-green-2 dark:bg-green-1;
     }
     .badge.badge-purple {
-        @apply rounded-md text-[#6226EF] dark:text-white bg-[#e0d4fc] dark:bg-[#6226ef];
+        @apply rounded-md text-purple-1 dark:text-white bg-purple-2 dark:bg-purple-1;
     }
     .badge.badge-red {
-        @apply rounded-md text-[#EF3826] dark:text-white bg-[#fcd7d4] dark:bg-[#EF3826];
+        @apply rounded-md text-red-1 dark:text-white bg-red-2 dark:bg-red-1;
     }
     .badge.badge-yellow {
-        @apply rounded-md text-[#FFA756] dark:text-white bg-[#ffeddd] dark:bg-[#ffa756];
+        @apply rounded-md text-yellow-1 dark:text-white bg-yellow-2 dark:bg-yellow-1;
+    }
+
+    /* btns */
+    .btn {
+        @apply flex items-center justify-center tracking-wide shadow-md rounded-lg px-7 py-3 font-['Nunito_Sans'] text-sm text-center font-bold;
+    }
+    .btn.btn-blue {
+        @apply text-[#FFFFFF] bg-blue-1;
+    }
+    .btn.btn-green {
+        @apply text-[#FFFFFF] bg-green-1;
+    }
+    .btn.btn-red {
+        @apply text-[#FFFFFF] bg-red-1;
+    }
+    .btn.btn-yellow {
+        @apply text-[#FFFFFF] bg-yellow-1;
     }
 
     /* profile-name */
@@ -127,6 +144,6 @@
         @apply relative;
     }
     .notification-icon.notification-icon-active::after {
-        @apply content-[''] absolute size-3 -top-1 right-0 rounded-full bg-[#F93C65];
+        @apply content-[''] absolute size-3 -top-1 right-0 rounded-full bg-red-1;
     }
 }
