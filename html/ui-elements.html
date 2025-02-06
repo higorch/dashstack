@@ -7,7 +7,7 @@
     <title>Dashstack</title>
     <link rel="stylesheet" href="./assets/icons/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="./assets/css/frontend.css?v=4.0.2">
+    <link rel="stylesheet" href="./assets/css/frontend.css?v=4.0.3">
     <script>
         document.documentElement.classList.toggle('dark', localStorage.getItem('theme-dark') === 'true');
         document.documentElement.classList.toggle('group/theme-sidebar', localStorage.getItem('theme-sidebar') === 'true');
@@ -183,7 +183,7 @@
                     <i class="las la-times"></i>
                 </span>
                 <div class="flex items-center w-full px-6 py-5 border-b border-zinc-200/70 dark:border-slate-600/30">
-                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-xl text-[#202224] dark:text-white">Modal Normal</p>
+                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-base md:text-xl text-[#202224] dark:text-white">Modal Normal</p>
                 </div>
                 <div class="flex flex-col flex-grow p-6">
                     
@@ -205,11 +205,11 @@
 
                 </div>
                 <div class="flex justify-around items-center gap-6 w-full p-6 border-t border-slate-300/70 dark:border-slate-600/30">
-                    <a href="#" @click.prevent class="btn btn-blue flex-1">
+                    <a href="#" @click.prevent class="btn btn-blue flex-1 transition-none">
                         <i class="las la-save text-lg"></i>
                         <span>Save</span>
                     </a>
-                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1">
+                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1 transition-none">
                         <i class="las la-times text-lg"></i>
                         <span>Close</span>
                     </a>                          
@@ -225,7 +225,7 @@
                     <i class="las la-times"></i>
                 </span>
                 <div class="flex items-center w-full px-6 py-5 border-b border-zinc-200/70 dark:border-slate-600/30">
-                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-xl text-[#202224] dark:text-white">Modal Small</p>
+                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-base md:text-xl text-[#202224] dark:text-white">Modal Small</p>
                 </div>
                 <div class="flex flex-col flex-grow p-6">
                     
@@ -235,11 +235,11 @@
 
                 </div>
                 <div class="flex justify-around items-center gap-6 w-full p-6 border-t border-slate-300/70 dark:border-slate-600/30">
-                    <a href="#" @click.prevent class="btn btn-green flex-1">
+                    <a href="#" @click.prevent class="btn btn-green flex-1 transition-none">
                         <i class="las la-check text-lg"></i>
                         <span>Confirm</span>
                     </a>
-                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1">
+                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1 transition-none">
                         <i class="las la-times text-lg"></i>
                         <span>Close</span>
                     </a>                          
@@ -255,7 +255,7 @@
                     <i class="las la-times"></i>
                 </span>
                 <div class="flex items-center w-full px-6 py-5 border-b border-zinc-200/70 dark:border-slate-600/30">
-                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-xl text-[#202224] dark:text-white">Modal Full</p>
+                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-base md:text-xl text-[#202224] dark:text-white">Modal Full</p>
                 </div>
                 <div class="flex flex-col flex-grow p-6">
                     
@@ -277,11 +277,11 @@
 
                 </div>
                 <div class="flex justify-around items-center gap-6 w-full p-6 border-t border-slate-300/70 dark:border-slate-600/30">
-                    <a href="#" @click.prevent class="btn btn-blue flex-1">
+                    <a href="#" @click.prevent class="btn btn-blue flex-1 transition-none">
                         <i class="las la-save text-lg"></i>
                         <span>Save</span>
                     </a>
-                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1">
+                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1 transition-none">
                         <i class="las la-times text-lg"></i>
                         <span>Close</span>
                     </a>                          
@@ -292,12 +292,12 @@
     
     <div class="fixed inset-0 overflow-y-auto bg-black/70 invisible" x-data="modal('modal-sidebar')" :class="{'visible': open, 'invisible': !open}" x-bind="events">
         <div class="min-h-screen" @click.self="open = false">
-            <div class="flex flex-col fixed transition-all duration-200 w-5/12 h-screen shadow-lg bg-white dark:bg-[#273142]" :class="{'right-0 opacity-100': open, 'right-[-100%] opacity-0': !open}">
+            <div class="flex flex-col fixed transition-all duration-200 w-full md:w-[350px] h-screen shadow-lg bg-white dark:bg-[#273142]" :class="{'right-0 opacity-100': open, 'right-[-100%] opacity-0': !open}">
                 <span class="absolute top-6 right-6 text-lg cursor-pointer text-[#202224]/50 hover:text-[#202224] dark:text-white/50 dark:hover:text-white" @click.prevent="open = false">
                     <i class="las la-times"></i>
                 </span>
                 <div class="flex items-center w-full px-6 py-5 border-b border-zinc-200/70 dark:border-slate-600/30">
-                    <p class="font-medium text-xl text-slate-600 dark:text-slate-400">Modal Sidebar</p>
+                    <p class="leading-relaxed font-['Nunito_Sans'] font-normal text-base md:text-xl text-[#202224] dark:text-white">Modal Sidebar</p>
                 </div>
                 <div class="flex flex-col flex-grow p-6 gap-6 overflow-y-auto">
                     
@@ -319,7 +319,7 @@
 
                 </div>
                 <div class="flex justify-around items-center gap-6 w-full px-6 py-5 border-t border-slate-100 dark:border-slate-700">
-                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1">
+                    <a href="#" @click.prevent="open = false" class="btn btn-red flex-1 transition-none">
                         <i class="las la-times text-lg"></i>
                         <span>Close</span>
                     </a>        
@@ -329,7 +329,7 @@
     </div>
     <!-- modals -->
 
-    <script src="./assets/js/frontend.js?v=4.0.2"></script>
+    <script src="./assets/js/frontend.js?v=4.0.3"></script>
     <script src="./assets/js/custom.js"></script>
 </body>
 
