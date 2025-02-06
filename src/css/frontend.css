@@ -116,9 +116,7 @@
 
     /* btns */
     .btn {
-        @apply flex items-center justify-center tracking-wide shadow-md rounded-lg px-8 py-3 
-            font-['Nunito_Sans'] text-base text-center font-semibold transition-all duration-200 
-            focus:outline-none focus:ring-4 active:scale-95;
+        @apply flex items-center gap-1 justify-center tracking-wide shadow-md rounded-lg px-8 py-3 font-['Nunito_Sans'] text-base text-center font-semibold transition-all duration-200 focus:outline-none focus:ring-4;
     }
     .btn.btn-blue {
         @apply text-white bg-blue-1 hover:bg-blue-700 focus:ring-blue-300;
