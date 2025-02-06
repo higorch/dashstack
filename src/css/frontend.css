@@ -116,19 +116,21 @@
 
     /* btns */
     .btn {
-        @apply flex items-center justify-center tracking-wide shadow-md rounded-lg px-7 py-3 font-['Nunito_Sans'] text-sm text-center font-bold;
+        @apply flex items-center justify-center tracking-wide shadow-md rounded-lg px-8 py-3 
+            font-['Nunito_Sans'] text-base text-center font-semibold transition-all duration-200 
+            focus:outline-none focus:ring-4 active:scale-95;
     }
     .btn.btn-blue {
-        @apply text-[#FFFFFF] bg-blue-1;
+        @apply text-white bg-blue-1 hover:bg-blue-700 focus:ring-blue-300;
     }
     .btn.btn-green {
-        @apply text-[#FFFFFF] bg-green-1;
+        @apply text-white bg-green-1 hover:bg-green-700 focus:ring-green-300;
     }
     .btn.btn-red {
-        @apply text-[#FFFFFF] bg-red-1;
+        @apply text-white bg-red-1 hover:bg-red-700 focus:ring-red-300;
     }
     .btn.btn-yellow {
-        @apply text-[#FFFFFF] bg-yellow-1;
+        @apply text-white bg-yellow-1 hover:bg-yellow-600 focus:ring-yellow-300;
     }
 
     /* profile-name */
