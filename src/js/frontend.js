@@ -1,9 +1,11 @@
 import Alpine from 'alpinejs';
+import Choices from 'choices.js';
 import { OverlayScrollbars, ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrollPlugin } from 'overlayscrollbars';
 import Inputmask from "inputmask";
 import { computePosition, autoUpdate, flip, offset } from "@floating-ui/dom";
 
 window.Alpine = Alpine;
+window.Choices = Choices;
 window.OverlayScrollbars = OverlayScrollbars;
 
 OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrollPlugin]);

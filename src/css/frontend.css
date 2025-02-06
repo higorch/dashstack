@@ -1,15 +1,49 @@
 @import 'overlayscrollbars/overlayscrollbars.css';
+@import "choices.js/public/assets/styles/choices.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply font-['Nunito_Sans'];
+}
+
+/* overlayscrollbars */
 .os-scrollbar-handle {
     @apply bg-blue-1/40 !important;
 }
 
-* {
-    @apply font-['Nunito_Sans'];
+/* choices */
+.choices {
+    @apply rounded-md !important;
+}
+.choices .choices__inner {
+    @apply font-semibold w-full h-[45px] rounded-md border text-[#606060] dark:text-white border-[#D5D5D5] dark:border-[#404959] bg-[#F5F6FA] dark:bg-[#323D4E] !important;
+}
+.choices .choices__input {
+    @apply border-[#D5D5D5] dark:border-[#313D4F] text-[#202224] dark:text-white bg-white dark:bg-[#273142] !important;
+}
+.choices .choices__list--dropdown {
+    @apply text-[#606060] dark:text-white border-[#D5D5D5] dark:border-[#404959] bg-[#F5F6FA] dark:bg-[#323D4E] !important;
+}
+.choices .is-highlighted {
+    @apply text-[#202224] dark:text-white bg-[#d4d4d4] dark:bg-[#273142] !important;
+}
+.choices[data-type*="select-one"] .choices__button {
+    @apply dark:invert !important;
+}
+.choices[data-type*="select-one"]::after {
+    @apply border-[#b6b7ba_transparent_transparent_transparent] dark:border-[#666e7a_transparent_transparent_transparent] mt-[2px] top-1/2 -translate-y-1/2 !important;
+}
+.choices[data-type*="text"] .choices__input {
+    @apply bg-transparent !important;
+}
+.choices[data-type*="text"] .choices__item {
+    @apply text-white bg-blue-1 hover:bg-blue-700 focus:ring-blue-300;
+}
+.choices[data-type*="text"] .choices__button {
+    @apply invert-0 border-l-blue-2/60 !important;
 }
 
 @layer components {
@@ -98,10 +132,10 @@
         @apply text-sm text-[#202224];
     }
     .table-primary tr th {
-        @apply border-b border-[#D5D5D5] dark:border-[#313D4F] px-7 py-3 text-left font-bold text-[#202224] dark:text-white bg-[#FCFDFD] dark:bg-[#323D4E];
+        @apply px-7 py-3 border-b border-[#D5D5D5] dark:border-[#313D4F] text-left font-bold text-[#202224] dark:text-white bg-[#FCFDFD] dark:bg-[#323D4E];
     }
     .table-primary tr td {
-        @apply border-b border-[#D5D5D5] dark:border-[#313D4F] px-7 py-5 text-[#202224] dark:text-white bg-white dark:bg-[#273142];
+        @apply px-7 py-5 border-b border-[#D5D5D5] dark:border-[#313D4F] text-[#202224] dark:text-white bg-white dark:bg-[#273142];
     }
     .table-primary tbody tr:last-child * {
         @apply border-b-0;
@@ -148,7 +182,7 @@
 
     /* input-basic */
     .input-basic {
-        @apply font-semibold w-full h-[45px] py-1 px-2 shadow-sm appearance-none rounded-md border text-[#606060] dark:text-white border-[#D5D5D5] dark:border-[#404959] bg-[#F5F6FA] dark:bg-[#323D4E];
+        @apply font-semibold w-full h-[45px] py-1 px-2 appearance-none rounded-md border text-[#606060] dark:text-white border-[#D5D5D5] dark:border-[#404959] bg-[#F5F6FA] dark:bg-[#323D4E];
     }
     .input-basic:focus {
         @apply border-2 shadow-none outline outline-2 outline-[#404040] dark:outline-[#f5f6fa];
