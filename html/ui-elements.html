@@ -226,8 +226,8 @@
                                     <label class="label-basic block">Status</label>
                                     <select class="input-basic" x-init="new Choices($el, {
                                         removeItemButton: true,
+                                        placeholderValue: '---',
                                     })">
-                                        <option></option>
                                         <option value="active">Active</option>
                                         <option value="deactive">Deactive</option>
                                     </select>
@@ -236,7 +236,7 @@
                                 <div class="relative col-span-full md:col-span-3">
                                     <label class="label-basic block">Tags</label>
                                     <input type="text" class="input-basic" x-init="new Choices($el, {
-                                        removeItemButton: true,
+                                        removeItemButton: true
                                     })">
                                 </div>
 
