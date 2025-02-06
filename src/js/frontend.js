@@ -24,6 +24,7 @@ Alpine.data('app', () => ({
         let sidebar = this.$el;
         if (sidebar === this.$event.target) {
             this.themeSidebar = false;
+            localStorage.setItem('theme-sidebar', false);
         }
     }
 }));

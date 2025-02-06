@@ -3463,6 +3463,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('app', function () {
       var sidebar = this.$el;
       if (sidebar === this.$event.target) {
         this.themeSidebar = false;
+        localStorage.setItem('theme-sidebar', false);
       }
     }
   };

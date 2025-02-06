@@ -12,7 +12,13 @@
 
     /* dash-container  */
     .dash-container {
-        @apply flex flex-col w-full md:w-[calc(100%-240px)] md:group-only/theme-sidebar:w-[calc(100%-100px)] h-full md:ml-auto md:transition-['width'] md:duration-300 md:ease-in-out;
+        @apply flex flex-col w-full md:w-[calc(100%-240px)] md:group-only/theme-sidebar:w-[calc(100%-100px)] md:ml-auto md:transition-['width'] md:duration-300 md:ease-in-out;
+    }
+    .dash-container .dash-container-header {
+        @apply sticky top-0 z-40 flex justify-between items-center px-7 py-4 shadow-sm bg-white dark:bg-[#273142];
+    }
+    .dash-container .dash-container-body {
+        @apply relative z-30 grow flex flex-col p-7 gap-7 bg-[#F5F6FA] dark:bg-[#1B2431];
     }
 
     /* dash-sidebar  */
@@ -31,7 +37,7 @@
 
     /* dash-sidebar-menu */
     .dash-sidebar-menu {
-        @apply flex flex-row md:flex-col w-full h-full;
+        @apply flex flex-row md:flex-col w-full h-full shadow-sm;
     }
     .dash-sidebar-menu nav ul {
         @apply flex flex-col gap-1;
