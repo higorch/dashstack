@@ -63,7 +63,7 @@
                                         <span class="text-sm font-semibold">Dashboard</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="order-lists.html" title="Order Lists">
                                         <i class="las la-border-all text-[22px]"></i> 
                                         <span class="text-sm font-semibold">Order Lists</span>
@@ -128,11 +128,84 @@
 
             <div class="dash-container-body">
 
-                <h3 class="leading-relaxed font-bold text-2xl md:text-[32px] text-[#202224] dark:text-white">Dashboard</h3>
+                <h3 class="leading-relaxed font-bold text-2xl md:text-[32px] text-[#202224] dark:text-white">Order Lists</h3>
 
                 <div class="flex flex-col gap-6">
 
-                    <p class="text-sm text-[#202224] dark:text-white">...</p>
+                    <div class="overflow-hidden rounded-lg border border-[#e8e9e9] dark:border-[#313D4F] bg-white dark:bg-[#273142]" x-data="{
+                        init() {
+                            this.initOverlayScrollbars();
+                        },
+                        initOverlayScrollbars() {
+                            OverlayScrollbars($el, {}).destroy();
+                            OverlayScrollbars($el, {
+                                overflow: {
+                                    y: 'scroll'
+                                },
+                                scrollbars: {
+                                    clickScroll: true,
+                                    autoHide: 'leave',
+                                    autoHideDelay: 400
+                                }
+                            });
+                        }
+                    }">
+                        <table class="table-primary table-fixed">
+                            <thead>
+                                <tr>
+                                    <th class="uppercase sticky left-0">ID</th>
+                                    <th class="uppercase">Name</th>
+                                    <th class="uppercase">Address</th>
+                                    <th class="uppercase">Date</th>
+                                    <th class="uppercase">Type</th>
+                                    <th class="uppercase">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-[80px] sticky left-0">0001</td>
+                                    <td>Christine Brooks</td>
+                                    <td>089 Kutch Green Apt. 448</td>
+                                    <td>04 Sep 2025</td>
+                                    <td>Electric</td>
+                                    <td>
+                                        <span class="badge badge-purple">Processing</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="w-[80px] sticky left-0">0002</td>
+                                    <td>Rosie Pearson</td>
+                                    <td>979 Immanuel Ferry Suite 526</td>
+                                    <td>28 May 2025</td>
+                                    <td>Book</td>
+                                    <td>
+                                        <span class="badge badge-green">Completed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="w-[80px] sticky left-0">0003</td>
+                                    <td>Rosie Todd</td>
+                                    <td>New Jon</td>
+                                    <td>30 Apr 2025</td>
+                                    <td>Medicine</td>
+                                    <td>
+                                        <span class="badge badge-red">Rejected</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="w-[80px] sticky left-0">0004</td>
+                                    <td>Dollie Hines</td>
+                                    <td>124 Lyla Forge Suite 975</td>
+                                    <td>09 Jan 2025</td>
+                                    <td>Book</td>
+                                    <td>
+                                        <span class="badge badge-yellow">On Hold</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                       
+
+                    </div>
 
                 </div>
 

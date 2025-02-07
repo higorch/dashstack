@@ -14,6 +14,10 @@ OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrol
 Alpine.data('app', () => ({
     themedark: localStorage.getItem('theme-dark') === 'true',
     themeSidebar: localStorage.getItem('theme-sidebar') === 'true',
+    init() {
+        this.activeMenuSidebar();
+        this.toggleSubmenu();
+    },
     toggleThemeDark() {
         this.themedark = !this.themedark;
         localStorage.setItem('theme-dark', this.themedark);
@@ -22,12 +26,52 @@ Alpine.data('app', () => ({
         this.themeSidebar = !this.themeSidebar;
         localStorage.setItem('theme-sidebar', this.themeSidebar);
     },
-    closeSidebarMobile() {
+    closeSidebarOverlay() {
         let sidebar = this.$el;
         if (sidebar === this.$event.target) {
             this.themeSidebar = false;
             localStorage.setItem('theme-sidebar', false);
         }
+    },
+    toggleSubmenu() {
+        let submenus = document.getElementsByClassName('dash-sidebar-submenu');
+
+        Array.from(submenus).forEach(submenu => {
+            submenu.addEventListener('click', () => {
+                submenu.classList.toggle('open');
+
+                const button = submenu.querySelector('a');
+                const tooltip = submenu.querySelector('ul');
+
+                if (button && tooltip) {
+                    computePosition(button, tooltip, {
+                        strategy: 'fixed',
+                        placement: 'right-start',
+                        middleware: [flip(), offset(0)]
+                    }).then(({ x, y }) => {
+                        Object.assign(tooltip.style, {
+                            top: `${y}px`,
+                            left: `${x}px`
+                        });
+                    });
+                }
+            });
+        });
+    },
+    activeMenuSidebar() {
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("nav ul li a");
+            const currentPage = window.location.pathname.split("/").pop();
+
+            links.forEach(link => {
+                const linkPage = link.getAttribute("href");
+                if (linkPage === currentPage) {
+                    link.closest("li").classList.add("active");
+                } else {
+                    link.closest("li").classList.remove("active");
+                }
+            });
+        });
     }
 }));
 
