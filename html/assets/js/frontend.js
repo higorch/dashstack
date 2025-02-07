@@ -3456,7 +3456,6 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('app', function () {
     themeSidebar: localStorage.getItem('theme-sidebar') === 'true',
     init: function init() {
       this.activeMenuSidebar();
-      this.toggleSubmenu();
     },
     toggleThemeDark: function toggleThemeDark() {
       this.themedark = !this.themedark;
@@ -3474,28 +3473,23 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('app', function () {
       }
     },
     toggleSubmenu: function toggleSubmenu() {
-      var submenus = document.getElementsByClassName('dash-sidebar-submenu');
-      Array.from(submenus).forEach(function (submenu) {
-        submenu.addEventListener('click', function () {
-          submenu.classList.toggle('open');
-          var button = submenu.querySelector('a');
-          var tooltip = submenu.querySelector('ul');
-          if (button && tooltip) {
-            (0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.computePosition)(button, tooltip, {
-              strategy: 'fixed',
-              placement: 'right-start',
-              middleware: [(0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.flip)(), (0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.offset)(0)]
-            }).then(function (_ref) {
-              var x = _ref.x,
-                y = _ref.y;
-              Object.assign(tooltip.style, {
-                top: "".concat(y, "px"),
-                left: "".concat(x, "px")
-              });
-            });
-          }
+      var button = this.$el;
+      var submenu = this.$el.nextElementSibling;
+      this.$el.parentElement.classList.toggle('active-submenu');
+      if (button && submenu) {
+        (0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.computePosition)(button, submenu, {
+          strategy: 'fixed',
+          placement: 'right-start',
+          middleware: [(0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.flip)(), (0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.offset)(10)]
+        }).then(function (_ref) {
+          var x = _ref.x,
+            y = _ref.y;
+          Object.assign(submenu.style, {
+            top: "".concat(y, "px"),
+            left: "".concat(x, "px")
+          });
         });
-      });
+      }
     },
     activeMenuSidebar: function activeMenuSidebar() {
       document.addEventListener("DOMContentLoaded", function () {

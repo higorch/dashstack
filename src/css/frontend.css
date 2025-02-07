@@ -77,74 +77,79 @@
     .dash-sidebar-menu {
         @apply flex flex-row md:flex-col w-full h-full shadow-sm;
     }
-    .dash-sidebar-menu nav > ul {
+    .dash-sidebar-menu nav ul {
         @apply flex flex-col gap-1;
     }
-    .dash-sidebar-menu nav > ul li {
+    .dash-sidebar-menu nav ul li {
         @apply px-6 relative;
     }
-    .dash-sidebar-menu nav > ul li.active::before {
+    .dash-sidebar-menu nav ul li.active::before {
         @apply content-[''] absolute left-0 inset-y-0 w-1 rounded-tr-lg rounded-br-lg bg-blue-1
     }
-    .dash-sidebar-menu nav > ul li a {
+    .dash-sidebar-menu nav ul li a {
         @apply relative flex items-center gap-3 p-4 whitespace-nowrap overflow-hidden text-clip rounded-md text-[#202224] dark:text-white;
     }
-    .dash-sidebar-menu nav > ul li a::after {
+    .dash-sidebar-menu nav ul li a::after {
         @apply content-[''] absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white dark:from-[#273142] to-transparent;
     }
-    .dash-sidebar-menu nav > ul li.active a {
+    .dash-sidebar-menu nav ul li.active a {
         @apply text-white bg-blue-1;
     }
-    .dash-sidebar-menu nav > ul li.active a::after {
+    .dash-sidebar-menu nav ul li.active a::after {
         @apply content-[''] absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-blue-1 to-transparent;
     }
     /* dash-sidebar-submenu */
     .dash-sidebar-menu nav ul li.dash-sidebar-submenu {
         @apply relative;
     }
-    .dash-sidebar-menu nav ul li.dash-sidebar-submenu > a .arrow {
+    .dash-sidebar-menu nav ul li.dash-sidebar-submenu a .arrow {
         @apply text-[10px] absolute right-4 top-1/2 -translate-y-1/2 rotate-0 transition-all;
     }
-    .dash-sidebar-menu nav ul li.dash-sidebar-submenu.open > a .arrow {
+    .dash-sidebar-menu nav ul li.dash-sidebar-submenu.active-submenu a .arrow {
         @apply -rotate-180;
     }
     .dash-sidebar-menu nav ul li.dash-sidebar-submenu ul {
-        @apply h-0 opacity-0 transition-opacity;
+        @apply h-0 overflow-hidden opacity-0 transition-opacity;
     }
-    .dash-sidebar-menu nav ul li.dash-sidebar-submenu.open ul {
+    .dash-sidebar-menu nav ul li.dash-sidebar-submenu.active-submenu ul {
         @apply h-auto opacity-100;
     }
     .dash-sidebar-menu nav ul li.dash-sidebar-submenu ul li a {
         @apply text-sm py-2 pl-6;
     }
-    .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu > a .arrow {
-        @apply right-0 top-3 translate-y-0 -rotate-90;
-    }
-    .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu.open > a .arrow {
-        @apply rotate-90;
-    }
-    .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu ul {
-        @apply fixed text-left w-[220px] h-auto shadow-xl rounded-md bg-white dark:bg-[#273142];
-    }
-    .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu ul li a {
-        @apply w-full p-3;
-    }
 
     @media (min-width: 992px) {
-        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav > ul li {
+       /* dash-sidebar-menu */
+        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li {
             @apply px-2;
         }
         .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav > ul > li > a {
             @apply flex-col justify-center gap-1 text-center px-0 py-2 whitespace-normal overflow-auto;
         }
-        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav > ul li a span {
+        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li a span {
             @apply text-xs;
         }
-        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav > ul li.active a {
+        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li.active a {
             @apply bg-white dark:bg-[#273142] text-blue-1;
         }
-        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav > ul li a::after {
+        .group\/theme-sidebar .dash-sidebar .dash-sidebar-menu nav ul li a::after {
             @apply hidden;
+        }
+        /* dash-sidebar-submenu */
+        .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu a .arrow {
+            @apply right-0 top-3 translate-y-0 -rotate-90;
+        }
+        .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu.active-submenu a .arrow {
+            @apply rotate-90;
+        }
+        .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu ul {
+            @apply fixed hidden text-left w-[220px] h-auto shadow-xl rounded-md bg-white dark:bg-[#273142];
+        }
+        .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu.active-submenu ul {
+            @apply block;
+        }
+        .group\/theme-sidebar .dash-sidebar-menu nav ul li.dash-sidebar-submenu ul li a {
+            @apply w-full p-3;
         }
     }
 

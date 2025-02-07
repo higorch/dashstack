@@ -16,7 +16,6 @@ Alpine.data('app', () => ({
     themeSidebar: localStorage.getItem('theme-sidebar') === 'true',
     init() {
         this.activeMenuSidebar();
-        this.toggleSubmenu();
     },
     toggleThemeDark() {
         this.themedark = !this.themedark;
@@ -34,29 +33,23 @@ Alpine.data('app', () => ({
         }
     },
     toggleSubmenu() {
-        let submenus = document.getElementsByClassName('dash-sidebar-submenu');
+        const button = this.$el;
+        const submenu = this.$el.nextElementSibling;
 
-        Array.from(submenus).forEach(submenu => {
-            submenu.addEventListener('click', () => {
-                submenu.classList.toggle('open');
+        this.$el.parentElement.classList.toggle('active-submenu');
 
-                const button = submenu.querySelector('a');
-                const tooltip = submenu.querySelector('ul');
-
-                if (button && tooltip) {
-                    computePosition(button, tooltip, {
-                        strategy: 'fixed',
-                        placement: 'right-start',
-                        middleware: [flip(), offset(0)]
-                    }).then(({ x, y }) => {
-                        Object.assign(tooltip.style, {
-                            top: `${y}px`,
-                            left: `${x}px`
-                        });
-                    });
-                }
+        if (button && submenu) {
+            computePosition(button, submenu, {
+                strategy: 'fixed',
+                placement: 'right-start',
+                middleware: [flip(), offset(10)]
+            }).then(({ x, y }) => {
+                Object.assign(submenu.style, {
+                    top: `${y}px`,
+                    left: `${x}px`
+                });
             });
-        });
+        }
     },
     activeMenuSidebar() {
         document.addEventListener("DOMContentLoaded", () => {
